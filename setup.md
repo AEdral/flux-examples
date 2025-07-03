@@ -21,6 +21,8 @@ touch clusters/dev/kustomization.yaml
 
 #git add * git commit -m "" git push
 
+kubectl apply -f clusters/dev/flux-system/gotk-components.yaml
+
 
 #verifica
 flux get kustomizations -n flux-system

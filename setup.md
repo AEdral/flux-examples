@@ -18,25 +18,12 @@ flux bootstrap github \
 mkdir clusters
 mkdir clusters/dev
 touch clusters/dev/kustomization.yaml
-echo "apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: kustom-webapp-dev
-  namespace: flux-system
-spec:
-  interval: 1m
-  path: ./kustom-webapp/overlays/dev
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  targetNamespace: default" > clusters/dev/kustomization.yaml
 
-#git push
+#git add * git commit -m "" git push
 
 
 #verifica
 flux get kustomizations -n flux-system
 kubectl get all -n default
 
-#
+

@@ -31,3 +31,12 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: default" > clusters/dev/kustomization.yaml
+
+#git push
+
+
+#verifica
+flux get kustomizations -n flux-system
+kubectl get all -n default
+
+#
